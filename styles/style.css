@@ -1,0 +1,218 @@
+.entete{
+	font-weight:bold;
+	font-size:20px;
+	background-color: #172B39;
+	color:white;
+	border-bottom-style: solid;
+	border-bottom-color: #FE9525;
+	border-bottom-width: 3px;
+	}
+	
+.contenant{
+	padding:15px;
+}
+
+.tableau{
+	border-style:solid;
+	border-width:3px;
+	margin-left:auto;
+	margin-right:auto;
+	min-width:20%;
+	border-collapse:collapse;
+	text-align:center;
+	padding:3px;
+	}
+.corps{
+	font-family:"Tahoma";
+	color:black;
+	margin-left:auto;
+	margin-right:auto;
+	padding-bottom:35px;
+	--background-color:#F5F9FD;
+	min-height:650px;
+	}
+.corps_d{
+	width:50%;
+	float:left;
+	font-family:"Tahoma";
+	color:#000000;
+	background-color:#9EBACC;
+	}
+.corps_g{
+	width:25%;
+	float:left;
+	margin-left:20%;
+	background-color:#9EBACC;
+	padding-bottom:20px;
+	}
+.impair{
+	background-color:#DADFE2;
+	}
+p.erreur{
+	font-family:"Arial";
+	font-size:18px;
+	color:#FD7210;
+	text-shadow:
+		#960B0B 1px 1px 1px,
+		#960B0B -1px 1px 1px,
+		#960B0B -1px -1px 1px,
+		#960B0B 1px -1px 1px;
+	}
+.bloc{
+width:40%;
+min-height:500px;
+margin-top:10px;
+margin-left:auto;
+margin-right:auto;
+border-style:solid;
+border-color:#FE9525;
+border-top-left-radius: 4px;
+border-top-right-radius: 4px;
+border-bottom-left-radius: 4px;
+border-bottom-right-radius: 4px;
+padding:4px;
+
+}
+.pied{
+	clear:both;
+	position:relative;
+	text-align:center;
+	background-color:#D7F1FB;
+	}
+.fauxpied{
+	clear:both;
+	position:relative;
+	top:10px;
+	}
+body{
+	background: url(../images/bg.jpg) no-repeat center fixed; 
+  -webkit-background-size: cover; /* pour Chrome et Safari */
+  -moz-background-size: cover; /* pour Firefox */
+  background-size: cover; /* version standardisée */
+	width:65%;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:0px;
+	margin-bottom:0px;
+}
+
+html{
+	background-color:#999FA1;
+}
+label{
+	display: block;
+	width: 130px;
+	float:left;
+}
+td{
+	border-style:solid;
+	border-width:2px;
+	padding-left:5px;
+	padding-right:5px;
+	padding-top:3px;
+	padding-bottom:3px;
+	border-color:#2E4B5F;
+	color:black;
+}
+th{
+	background-color:#DCF1FF;
+	border-style:solid;
+	border-width:2px;
+	padding:2px;
+	border-color:#071F2F;
+	}
+
+h2,h1{
+	text-shadow: #000000 0.1em 0.1em 0.2em;
+	letter-spacing:-0.06em;
+	text-align:center;
+	font-family:"Open Sans"; /*URW Palladio L";*/
+	margin:0px;
+	color:#FFFFFF; /* orange FE9525*/
+	}
+legend{
+--	text-shadow: #000000 0.1em 0.1em 0.2em;
+	color:#FE9525; /* orange FE9525*/
+	}
+table{
+font-size:small;
+min-width:30%;
+margin-left:auto;
+margin-right:auto;
+border-collapse:collapse;
+}
+td.adresse{
+font-family:"Nimbus Mono L";
+}
+td.moybasse{
+color:white;
+background-color:red;
+font-weight:bold;
+}
+td.moyok{
+background-color:yellow;
+}
+td.moyhaute{
+background-color:green;
+}
+#submit, #afficher {
+    background-color: #ccc;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius:6px;
+    color: #fff;
+    font-family: 'Open Sans';
+    font-size: 12px;
+    text-decoration: none;
+    cursor: pointer;
+     border:none;
+}
+#submit:hover, #afficher:hover {
+    border: none;
+    background:#FE9525;
+    box-shadow: 0px 0px 1px #777;
+    
+}
+select {
+	-moz-appearance: none;  
+    background: transparent;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius:6px;
+    color: #000;
+    font-family: 'Open Sans';
+    font-size: 14px;
+    text-decoration: none;
+    cursor: pointer;
+     border:none;
+}
+option {
+    background-color: #aef;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius:6px;
+    color: #fff;
+    font-family: 'Open Sans';
+    font-size: 14px;
+    text-decoration: none;
+    cursor: pointer;
+     border:none;
+}
+th.header { 
+    background-image: url(../images/small.gif);     
+    cursor: pointer; 
+    font-weight: bold; 
+    background-repeat: no-repeat; 
+    background-position: center right; 
+    padding-right: 20px; 
+    --border-right: 1px solid #dad9c7; 
+    margin-left: -1px; 
+}
+th.headerSortDown { 
+    background-image: url(../images/small_desc.gif); 
+    background-color: #3399FF; 
+}
+th.headerSortUp { 
+    background-image: url(../images/small_asc.gif); 
+    background-color: #3399FF; 
+}

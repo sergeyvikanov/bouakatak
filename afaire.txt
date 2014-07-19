@@ -1,0 +1,32 @@
+BOUAK.com
+
+--------------------------------------------------
+Fonctionnalités manquantes
+- inscription membre
+- envoi des email (pour la creation des comptes utilisateur)
+- gestion des points
+- zone membre
+- zone webmaster (ajout de questions, suppression membre)
+
+
+
+---------------------------------------------------
+Bugs à corriger
+- un F5 ou CTRL+F5 sur la page de question lance une question suivante
+- les redirections en cas de login non accepté
+- indentation du code
+- mise en cache des js de jsquery aléatoire
+- creation script unique php pour se connecter à la BDD
+- Validation/refus d'une réponse -> Levenshtein ?
+
+
+---------------------------------------------------
+Reflexions
+- Sécurité :
+	- scores : page reponse.php qui peut être piratée
+	- recuperation de l'énoncé facile pour un utilisateur de firebug 
+- Base de questions
+- AWSTATS (pour trouver des failles)
+- Référencement
+- Theme (Jquery UI, perso...)
+- gestion de versions de code

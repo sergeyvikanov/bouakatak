@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>BOUAK !! Trouve le joueur !!</title>
+		<link rel="stylesheet" type="text/css" href="styles/jquery-ui-1.10.4.custom.css" />
+		<script type="text/javascript" src="js/jquery-1.10.2.js"></script>
+		<script type="text/javascript" src="js/jquery-ui-1.10.4.custom.js"></script>
+		
+		
+		<SCRIPT LANGUAGE=JavaScript charset="utf-8">
+var chaine = window.atob("Sm91ZXVyIG7pIGVuIDE5NzUsIGplIHN1aXMgZm9ybekgZHUgY/R06SBkdSBQYXJpcyBTYWludC1HZXJtYWluIGV0IHNpIGplIG4neSBk6WNvdXZyZSBwYXMgbGUgbW9uZGUgcHJvZmVzc2lvbm5lbCAocHVpc3F1ZSBqZSBzdWlzIHBy6nTpIGRhbnMgdW4gY2x1YiBkZSBEMiBkdXJhbnQgZGV1eCBzYWlzb25zKSwgaid5IHJldmllbnMgZm9ydCBkJ3VuZSBleHDpcmllbmNlIGRlIDM5IG1hdGNocyBkYW5zIGwnYW50aWNoYW1icmUgZGUgbCfpbGl0ZS4gRGUgcmV0b3VyIGRhbnMgbGEgY2FwaXRhbGUsIGonZWZmZWN0dWUgMiBzYWlzb25zIGRlIG3qbWUgZmFjdHVyZTogbGEgcHJlbWnocmUsIGplIHJlc3RlIGRhbnMgbCdvbWJyZSBkJ3VuIGludGVybmF0aW9uYWwgcGFzc+kgcGFyIExlbnMgYXZhbnQgZGUgbifqdHJlIHF1ZSByZW1wbGHnYW50LiBEYW5zIGxlcyBkZXV4IGNhcywgamUgbWUgY29udGVudGUgZGUgbWlldHRlcywgbm90YW1tZW50IGRhbnMgbGVzIGNvdXBlcyBuYXRpb25hbGVzIChqJ2VuIHJlbXBvcnRlIHRvdXQgZGUgbeptZSAyISkuIEFmaW4gZGUgZGlzcG9zZXIgZGUgdGVtcHMgZGUgamV1LCBqZSBxdWl0dGUgbGUgUFNHIHBvdXIgcmVqb2luZHJlIHVuIGNsdWIgculjZW1tZW50IHByb211IHF1aSBtJ2FjY29yZGUgcGx1cyBkZSBjb25maWFuY2UgZHVyYW50IHF1YXRyZSBzYWlzb25zLiBMYSBiZWxsZSBpZHlsbGUgc2UgdGVybWluZSBzdXIgdW4gbGljZW5jaWVtZW50IHBvdXIgZmF1dGUgZ3JhdmUsIHB1aXNxdWUgaidhaSB0b3V0IGJvbm5lbWVudCByZWZ1c+kgZGUgam91ZXIgYXZlYyBsJ+lxdWlwZSBy6XNlcnZlLiAocG91ciBsYSBwZXRpdGUgaGlzdG9pcmUsIDcgYW5zIGFwcuhzIGNlcyBmYWl0cywgaidhaSBy6WN1cOly6SBsYSBzb21tZSByb25kZWxldHRlIGRlIDEuMDUyLjAwMCBldXJvcyBwb3VyIGxpY2VuY2llbWVudCBhYnVzaWYpLiBKZSBwYXJzIGFsb3JzIGRhbnMgdW4gY2x1YiBkZSBkaXZpc2lvbiAxIGRhbnMgbGVxdWVsIGplIHBlaW5lIOAgbSdpbXBvc2VyICgzOCBtYXRjaHMgZW4gZGV1eCBzYWlzb25zKS4gRmluYWxlbWVudCwgamUgZOljaWRlIGRlIHJlam9pbmRyZSBsZSBjbHViIGRlIExpZ3VlIDIgYXZlYyBsZXF1ZWwgaidhdmFpcyBk6WNvdXZlcnQgbGUgbW9uZGUgcHJvZmVzc2lvbm5lbC4gSid5IGpvdWUgdG91am91cnM=");
+var nb_car = chaine.length;
+var diviseur = chaine.length/100;
+var tableau = chaine.split("");
+texte = new Array;
+var txt = '';
+var nb_msg = nb_car - 1;
+for (i=0; i<nb_car; i++) {
+texte[i] = txt+tableau[i];
+var txt = texte[i];
+}
+
+actual_texte = 0;
+function changeMessage()
+{
+document.getElementById("bloc").innerHTML = texte[actual_texte];
+actual_texte++;
+if(actual_texte >= texte.length)
+actual_texte = nb_msg;
+}
+var i =0;
+var truc;
+var foutu = 0;
+function terminer()
+{
+foutu =
+1;
+clearInterval(truc);
+clearInterval(machin);
+document.getElementById("bloc").innerHTML = "VOUS AVEZ FERME LA FENETRE C'EST FOUTU !"
+valeur = 100;
+}
+function faire(param)
+{
+	if (param == 'go' && i == 0 && foutu != 1)
+	{
+		truc = setInterval("changeMessage()",50);
+		machin = setInterval("augmenter()",50);
+		i++;
+	}
+	if (param == 'stop')
+	{
+		clearInterval(truc);
+		clearInterval(machin);
+		i=0;
+	}
+}
+function verifier(reponse)
+{
+	if (reponse.value == 'fernandez')
+	{
+		alert ('gagné !!!');
+		document.getElementById("bloc").innerHTML = chaine;
+	}
+}
+</SCRIPT>
+</head>
+<body onBlur="terminer();">
+<div id="progressbar" style="width: 30%">
+<script type="text/javascript">
+
+var valeur = 0;
+var j=1;
+var machin;
+function augmenter(){
+	if (valeur <= 100)
+	{
+		if (j == 12)
+		{
+			valeur++;
+			$( "#progressbar" ).progressbar({
+			value: valeur
+			});
+			j=1;
+		}
+		else
+		{
+		j++;
+		}
+	}
+	else
+	{
+	$( "#progressbar" ).progressbar({
+		value: false
+		});
+
+//document.getElementById("progressbar").innerHTML = valeur;
+	}
+}
+//machin = setInterval("augmenter()",200);
+
+</script>
+</div>
+<input type="button" value="GO" onClick=faire('go'); style=""/>
+<DIV STYLE="width:30%; padding:3px; min-height:600px;" ID="bloc"></DIV>
+<input type="button" value="STOP" onClick=faire('stop'); />
+<input type="text" id="rep" />
+<input type = "button" value ="OK" onClick=verifier(rep); />
+
+</body>
+</html>
